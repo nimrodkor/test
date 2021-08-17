@@ -1,6 +1,7 @@
 name: push
 
-on: [push]
+on:
+  workflow_dispatch:
 
 jobs:
   checkov:
@@ -12,7 +13,7 @@ jobs:
 
       - name: Run Checkov action
         id: checkov
-        uses: bridgecrewio/checkov-action@master
+        uses: bridgecrewio/checkov-action@fix_file_permissions_docker
         with:
           quiet: false
           soft_fail: false
