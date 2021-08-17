@@ -13,7 +13,7 @@ jobs:
 
       - name: Run Checkov action
         id: checkov
-        uses: bridgecrewio/checkov-action@db6b3c02208c08f0d449436304888e454c3aca20
+        uses: bridgecrewio/checkov-action@fix_file_docker_permissions
         with:
           quiet: false
           soft_fail: false
